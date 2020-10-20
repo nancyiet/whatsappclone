@@ -39,7 +39,7 @@ const handleClose = () => {
      
     let ismounted = true;
     
-     db.collection('rooms').where('members','array-contains',user.uid).onSnapshot(snapshot=>{
+     db.collection('rooms').where('members','array-contains',user.uid).orderBy('timestamp',"desc").onSnapshot(snapshot=>{
       ismounted && setRooms(snapshot.docs.map(doc=>doc.data()));
      })
    
@@ -88,7 +88,7 @@ const handleClose = () => {
         </div>
         <div className="sidebar__chats">
                 <SidebarChats addnewchat/>
-               {
+               {console.log(rooms),
                  rooms.map(room=> (
                    <SidebarChats key={room.id} id={room.id}
                    name={room.name}/>
