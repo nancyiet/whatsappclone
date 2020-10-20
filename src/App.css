@@ -1,0 +1,33 @@
+.App
+{
+  display:grid;
+  place-items: center;
+  background-color: #dadbd3;
+  height:100vh;
+}
+.app__body{
+  display:flex;
+  margin-top: -40px;
+  height:90vh;
+  width:90vw;
+  background-color: #ededed;
+  box-shadow: -1px 4px 20px -6px rgba(0,0,0,0.75);
+}
+.home {
+  
+  text-transform: uppercase;
+   margin: auto;
+   font-size: 20px !important;
+}
+.offline{
+  display : block;
+  text-align: center;
+  color:gray;
+ 
+}
+.offline h3{
+  font-size: 25px;
+}
+.offline .MuiSvgIcon-root{
+  font-size: 3rem;
+}

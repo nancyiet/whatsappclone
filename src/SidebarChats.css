@@ -1,0 +1,47 @@
+.SidebarChats
+{
+    display:flex;
+    padding:20px;
+    cursor:pointer;
+    border-bottom: 1px solid #f6f6f6;
+}
+a{
+    text-decoration:none;
+    color: black;
+    display: flex;
+    flex:1;
+}
+.SidebarChats:hover{
+    background-color: #ebebeb;
+}
+.sidebarchat__info > h2{
+       
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.sidebarchat__info>p{
+    color:gray;
+}
+.sidebarchat__info
+{
+    max-width: 200px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-left: 15px;
+}
+.sidebarchat_right{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+}
+.sidebarchat_right button{
+    margin-left: 10px;
+}
+.MuiSvgIcon-root
+{
+    padding:10px;
+    color:gray;
+    
+}
