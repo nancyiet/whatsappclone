@@ -33,7 +33,7 @@ function Chat({roomId}) {
     const [open , setOpen] = React.useState(false);
     const [memberDetails , setMemberDetails]= React.useState([]);
     const [emojiToggler , setEmojiToggler] = React.useState(false);
-
+    const [ID,setID]=React.useState(null);
     var containerRef = React.useRef(null);
     const history = useHistory();
     const handleClick = (event) => {
@@ -47,7 +47,10 @@ function Chat({roomId}) {
   const openMembers = ()=>{
       setOpen(!open);
   }
-  
+
+   React.useEffect(()=>{
+     setID(roomId);
+  },[])
   React.useEffect(()=>{
       if(roomId===null)
       {
@@ -170,9 +173,9 @@ function Chat({roomId}) {
   },[roomId])
 
   React.useEffect(()=>{
-      if(roomId)
+      if(ID)
       {
-        db.collection('users').doc(user.uid).collection('roomIds').doc(roomId).update({
+        db.collection('users').doc(user.uid).collection('roomIds').doc(ID).update({
             unreadMsg: 0,
         })
       }
