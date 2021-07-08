@@ -3,6 +3,23 @@
 ![](public/whatsappgif.gif)
 
 
+This is a chat app in which an user can create groups, add friends, chat with them via text and emojis and also
+can send pictures. 
+
+## Main technologies used
+
+- [React Js](https://reactjs.org/)
+> Javascript library for building user interfaces.
+
+- [Context](https://reactjs.org/docs/context.html)
+> It is used to share data for a tree of react components.
+
+- [Firebase](https://firebase.google.com/)
+> It is Backend-as-a-service. I am using it for authentication, storing files, managing database.
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
